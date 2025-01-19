@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { View, Text, Animated, Image } from 'react-native';
+import { View, Text, Animated, Image, StatusBar } from 'react-native';
 import { AppSplashStyles } from '../styles/AppSplashStyles';
 
 const AppSplashScreen: React.FC<{ onFinish: () => void }> = ({ onFinish }) => {
@@ -9,7 +9,7 @@ const AppSplashScreen: React.FC<{ onFinish: () => void }> = ({ onFinish }) => {
     const scaleAnim = new Animated.Value(0.8);
 
     useEffect(() => {
-        // Start fade-in and scale-in animation
+        
         Animated.parallel([
             Animated.timing(fadeAnim, {
                 toValue: 1,
@@ -22,16 +22,16 @@ const AppSplashScreen: React.FC<{ onFinish: () => void }> = ({ onFinish }) => {
                 useNativeDriver: true,
             }),
         ]).start(() => {
-            // Start fade-out animation after a short delay
+            
             setTimeout(() => {
                 Animated.timing(fadeAnim, {
                     toValue: 0,
                     duration: 1000,
                     useNativeDriver: true,
                 }).start(() => {
-                    onFinish(); // Trigger navigation when animation completes
+                    onFinish();
                 });
-            }, 1000); // Delay before fade-out
+            }, 1000);
         });
 
         return () => {
@@ -42,6 +42,7 @@ const AppSplashScreen: React.FC<{ onFinish: () => void }> = ({ onFinish }) => {
 
     return (
         <View style={styles.container}>
+            <StatusBar hidden={true} animated={true} />
             <Animated.View
                 style={[
                     styles.logoContainer,

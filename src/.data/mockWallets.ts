@@ -6,7 +6,9 @@ export const myWallets = [
     walletAddress: '3FZbgi29cpjq2GjdwV8eyHuJJnkLtktZc5',
     recentTransactions: [
       { id: 'tx1', date: '2025-01-14', amount: '+0.05 BTC', status: 'Completed' },
-      { id: 'tx2', date: '2025-01-10', amount: '-0.02 BTC', status: 'Completed' },
+      { id: 'tx2', date: '2025-01-16', amount: '-0.1 LTC', status: 'Pending' },
+      { id: 'tx3', date: '2025-01-12', amount: '+0.3 LTC', status: 'Completed' },
+      { id: 'tx4', date: '2025-01-10', amount: '-0.02 BTC', status: 'Completed' },
     ],
     usage: 65,
   },
@@ -18,6 +20,8 @@ export const myWallets = [
     recentTransactions: [
       { id: 'tx1', date: '2025-01-12', amount: '+1.0 ETH', status: 'Completed' },
       { id: 'tx2', date: '2025-01-08', amount: '-0.3 ETH', status: 'Pending' },
+      { id: 'tx3', date: '2025-01-16', amount: '-0.1 LTC', status: 'Pending' },
+      { id: 'tx4', date: '2025-01-12', amount: '+0.3 LTC', status: 'Completed' },
     ],
     usage: 6,
   },
@@ -27,8 +31,10 @@ export const myWallets = [
     balance: '0.9 LTC',
     walletAddress: 'LNVT6J3fGmW8smK5drT4XDx7QoWxKmB4vj',
     recentTransactions: [
-      { id: 'tx1', date: '2025-01-16', amount: '-0.1 LTC', status: 'Pending' },
-      { id: 'tx2', date: '2025-01-12', amount: '+0.3 LTC', status: 'Completed' },
+      { id: 'tx1', date: '2025-01-13', amount: '+1.2 BTC', status: 'Completed' },
+      { id: 'tx2', date: '2025-01-10', amount: '-0.47 BTC', status: 'Pending' },
+      { id: 'tx3', date: '2025-01-16', amount: '-0.1 LTC', status: 'Pending' },
+      { id: 'tx4', date: '2025-01-12', amount: '+0.3 LTC', status: 'Completed' },
     ],
     usage: 35,
   },
@@ -39,7 +45,9 @@ export const myWallets = [
     walletAddress: '3E8ociqZa9mZUSwGdSmAEMAoAxBK3FNDcd',
     recentTransactions: [
       { id: 'tx1', date: '2025-01-13', amount: '+1.2 BTC', status: 'Completed' },
-      { id: 'tx2', date: '2025-01-10', amount: '-0.4 BTC', status: 'Completed' },
+      { id: 'tx2', date: '2025-01-10', amount: '-0.47 BTC', status: 'Pending' },
+      { id: 'tx3', date: '2025-01-3', amount: '+1.2 BTC', status: 'Completed' },
+      { id: 'tx4', date: '2025-01-1', amount: '-0.3 BTC', status: 'Completed' },
     ],
     usage: 80,
   },
@@ -51,6 +59,20 @@ export const myWallets = [
     recentTransactions: [
       { id: 'tx1', date: '2025-01-14', amount: '-0.2 ETH', status: 'Pending' },
       { id: 'tx2', date: '2025-01-09', amount: '+0.5 ETH', status: 'Completed' },
+      { id: 'tx3', date: '2025-01-4', amount: '-0.2 ETH', status: 'Pending' },
+      { id: 'tx4', date: '2025-01-1', amount: '+0.5 ETH', status: 'Completed' },
+    ],
+    usage: 5,
+  },
+  {
+    id: '6',
+    name: 'Main Wallet',
+    balance: '1.25 BTC',
+    walletAddress: '3FZbgi29cpjq2GjdwV8eyHuJJnkLtktZc5',
+    monitoringPurpose: 'Monitor family funds for shared expenses.',
+    recentTransactions: [
+      { id: 'tx1', date: '2025-01-14', amount: '+0.05 BTC', status: 'Completed' },
+      { id: 'tx2', date: '2025-01-10', amount: '-0.02 BTC', status: 'Completed' },
     ],
     usage: 5,
   },
@@ -67,6 +89,7 @@ export const monitoredWallets = [
       { id: 'tx1', date: '2025-01-13', amount: '+0.1 BTC', status: 'Completed' },
       { id: 'tx2', date: '2025-01-09', amount: '-0.05 BTC', status: 'Completed' },
     ],
+    usage: 5,
   },
   {
     id: '2',
@@ -78,6 +101,7 @@ export const monitoredWallets = [
       { id: 'tx1', date: '2025-01-15', amount: '+0.5 ETH', status: 'Completed' },
       { id: 'tx2', date: '2025-01-10', amount: '-0.1 ETH', status: 'Pending' },
     ],
+    usage: 5,
   },
   {
     id: '3',
@@ -89,6 +113,7 @@ export const monitoredWallets = [
       { id: 'tx1', date: '2025-01-14', amount: '+0.05 BTC', status: 'Completed' },
       { id: 'tx2', date: '2025-01-10', amount: '-0.02 BTC', status: 'Completed' },
     ],
+    usage: 5,
   },
   {
     id: '4',
@@ -100,6 +125,7 @@ export const monitoredWallets = [
       { id: 'tx1', date: '2025-01-12', amount: '+1.0 ETH', status: 'Completed' },
       { id: 'tx2', date: '2025-01-08', amount: '-0.3 ETH', status: 'Pending' },
     ],
+    usage: 5,
   },
   {
     id: '5',
@@ -111,16 +137,6 @@ export const monitoredWallets = [
       { id: 'tx1', date: '2025-01-15', amount: '+0.5 ETH', status: 'Completed' },
       { id: 'tx2', date: '2025-01-10', amount: '-0.1 ETH', status: 'Pending' },
     ],
-  },
-  {
-    id: '6',
-    name: 'Main Wallet',
-    balance: '1.25 BTC',
-    walletAddress: '3FZbgi29cpjq2GjdwV8eyHuJJnkLtktZc5',
-    monitoringPurpose: 'Monitor family funds for shared expenses.',
-    recentTransactions: [
-      { id: 'tx1', date: '2025-01-14', amount: '+0.05 BTC', status: 'Completed' },
-      { id: 'tx2', date: '2025-01-10', amount: '-0.02 BTC', status: 'Completed' },
-    ],
+    usage: 5,
   },
 ];

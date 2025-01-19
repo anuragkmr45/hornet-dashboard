@@ -2,12 +2,11 @@ import { StyleSheet } from "react-native";
 
 export const MyWalletStyles = StyleSheet.create({
   container: {
-    flex: 1,
     backgroundColor: '#000',
   },
   header: {
     padding: 16,
-    paddingTop: 40,
+    // paddingTop: 40,
     borderBottomLeftRadius: 20,
     borderBottomRightRadius: 20,
   },

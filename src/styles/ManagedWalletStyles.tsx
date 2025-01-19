@@ -100,7 +100,7 @@ export const ManagedWallettyles = StyleSheet.create({
     color: '#FFC107',
     fontSize: 16,
     fontWeight: 'bold',
-    marginBottom: 10,
+    marginBottom: 2,
     borderBottomWidth: 1,
     borderBottomColor: '#FFC107',
   },

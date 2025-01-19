@@ -47,7 +47,18 @@ const CustomDrawerContent = (props: any) => {
 const DrawerNavigation = () => {
   return (
     <Drawer.Navigator
-      drawerContent={(props) => <CustomDrawerContent {...props} />}
+      drawerContent={(props) => <CustomDrawerContent {...props} screenOptions={{
+        headerStyle: {
+          backgroundColor: '#6200EE',
+        },
+        headerTintColor: '#FFFFFF',
+        headerTitleStyle: {
+          fontWeight: 'bold', 
+        },
+        drawerStyle: {
+          backgroundColor: '#F4F4F4',
+        },
+      }} />}
     >
       <Drawer.Screen name="MyWallet" component={MyWallet} />
       <Drawer.Screen name="ManagedWallet" component={ManagedWallet} />

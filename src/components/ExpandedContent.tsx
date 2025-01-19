@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
 import { View, Text, Animated, TouchableOpacity } from 'react-native';
 import { ManagedWallettyles } from '../styles/ManagedWalletStyles';
+import { FC } from 'react';
 
 interface Transaction {
   id: string;
@@ -19,7 +19,7 @@ interface ExpandedContentProps {
   animationValues: { [key: string]: Animated.Value };
 }
 
-const ExpandedContent: React.FC<ExpandedContentProps> = ({ item, expandedWalletId, animationValues }) => {
+const ExpandedContent: FC<ExpandedContentProps> = ({ item, expandedWalletId, animationValues }) => {
   const styles = ManagedWallettyles;
 
   if (!expandedWalletId || expandedWalletId !== item.id) return null;

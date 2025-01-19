@@ -1,9 +1,12 @@
 import React, { useEffect } from 'react';
-import { View, Text, StyleSheet, Animated, Image } from 'react-native';
+import { View, Text, Animated, Image } from 'react-native';
+import { AppSplashStyles } from '../styles/AppSplashStyles';
 
 const AppSplashScreen: React.FC<{ onFinish: () => void }> = ({ onFinish }) => {
-    const fadeAnim = new Animated.Value(0); // For opacity
-    const scaleAnim = new Animated.Value(0.8); // For scaling effect
+    const styles = AppSplashStyles;
+
+    const fadeAnim = new Animated.Value(0); 
+    const scaleAnim = new Animated.Value(0.8);
 
     useEffect(() => {
         // Start fade-in and scale-in animation
@@ -57,27 +60,5 @@ const AppSplashScreen: React.FC<{ onFinish: () => void }> = ({ onFinish }) => {
         </View>
     );
 };
-
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-        backgroundColor: '#F5F5F5',
-    },
-    logoContainer: {
-        alignItems: 'center',
-    },
-    logo: {
-        width: 120,
-        height: 120,
-        marginBottom: 20,
-    },
-    appName: {
-        fontSize: 24,
-        fontWeight: 'bold',
-        color: '#333',
-    },
-});
 
 export default AppSplashScreen;

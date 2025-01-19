@@ -1,0 +1,152 @@
+import { StyleSheet } from "react-native";
+
+export const ManagedWallettyles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#000',
+    paddingBottom: 20
+  },
+  header: {
+    padding: 16,
+    paddingTop: 40,
+    borderBottomLeftRadius: 20,
+    borderBottomRightRadius: 20,
+  },
+  headerTitle: {
+    color: '#FFF',
+    fontSize: 24,
+    fontWeight: 'bold',
+  },
+  headerSubtitle: {
+    color: '#FFF',
+    fontSize: 16,
+    marginTop: 5,
+  },
+  cardContainer: {
+    backgroundColor: '#1e1e1e',
+    marginBottom: 5,
+    margin: 16,
+    borderRadius: 10,
+    padding: 16,
+    shadowColor: '#000',
+    shadowOpacity: 0.3,
+    shadowOffset: { width: 0, height: 2 },
+    shadowRadius: 4,
+  },
+  cardHeader: {
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+  iconContainer: {
+    width: 50,
+    height: 50,
+    borderRadius: 25,
+    backgroundColor: '#FFC107',
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginRight: 16,
+  },
+  iconText: {
+    color: '#000',
+    fontWeight: 'bold',
+    fontSize: 18,
+  },
+  cardContent: {
+    flex: 1,
+  },
+  walletName: {
+    color: '#FFC107',
+    fontSize: 18,
+    fontWeight: 'bold',
+  },
+  walletBalance: {
+    color: '#FFF',
+    fontSize: 16,
+    marginVertical: 8,
+  },
+  walletPurpose: {
+    color: '#9e9e9e',
+    fontSize: 14,
+    fontStyle: 'italic',
+  },
+  expandedContent: {
+    marginTop: 16,
+    padding: 16,
+    borderRadius: 10,
+    backgroundColor: '#222',
+    shadowColor: '#000',
+    shadowOpacity: 0.4,
+    shadowOffset: { width: 0, height: 4 },
+    shadowRadius: 6,
+    overflow: 'hidden',
+  },
+  walletAddressContainer: {
+    marginBottom: 16,
+  },
+  walletAddressTitle: {
+    color: '#9e9e9e',
+    fontSize: 14,
+    marginBottom: 8,
+  },
+  walletAddressText: {
+    color: '#FFC107',
+    fontSize: 14,
+    fontFamily: 'monospace',
+    backgroundColor: '#333',
+    padding: 8,
+    borderRadius: 8,
+  },
+  recentTransactionsTitle: {
+    color: '#FFC107',
+    fontSize: 16,
+    fontWeight: 'bold',
+    marginBottom: 10,
+    borderBottomWidth: 1,
+    borderBottomColor: '#FFC107',
+  },
+  transactionRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginBottom: 8,
+  },
+  transactionAmount: {
+    fontSize: 16,
+    fontWeight: 'bold',
+    flex: 1,
+  },
+  transactionDate: {
+    fontSize: 14,
+    color: '#9e9e9e',
+    flex: 1,
+  },
+  transactionStatusBadge: {
+    paddingHorizontal: 8,
+    paddingVertical: 4,
+    borderRadius: 10,
+  },
+  transactionStatusText: {
+    color: '#FFF',
+    fontSize: 12,
+    fontWeight: 'bold',
+  },  
+  addButton: {
+    position: 'absolute',
+    bottom: 16,
+    right: 16,
+    backgroundColor: '#FFC107',
+    width: 60,
+    height: 60,
+    borderRadius: 30,
+    alignItems: 'center',
+    justifyContent: 'center',
+    shadowColor: '#000',
+    shadowOpacity: 0.4,
+    shadowOffset: { width: 0, height: 4 },
+    shadowRadius: 4,
+  },
+  addButtonText: {
+    color: '#000',
+    fontSize: 28,
+    fontWeight: 'bold',
+  },
+});

@@ -1,0 +1,106 @@
+import { StyleSheet } from "react-native";
+
+export const MyWalletStyles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#000',
+  },
+  header: {
+    padding: 16,
+    paddingTop: 40,
+    borderBottomLeftRadius: 20,
+    borderBottomRightRadius: 20,
+  },
+  headerTitle: {
+    color: '#FFF',
+    fontSize: 24,
+    fontWeight: 'bold',
+  },
+  headerSubtitle: {
+    color: '#FFF',
+    fontSize: 16,
+    marginTop: 5,
+  },
+  avatar: {
+    width: 50,
+    height: 50,
+    borderRadius: 25,
+    position: 'absolute',
+    top: 40,
+    right: 16,
+  },
+  cardContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    backgroundColor: '#1e1e1e',
+    margin: 16,
+    borderRadius: 10,
+    padding: 16,
+    shadowColor: '#000',
+    shadowOpacity: 0.3,
+    shadowOffset: { width: 0, height: 2 },
+    shadowRadius: 4,
+  },
+  iconContainer: {
+    width: 50,
+    height: 50,
+    borderRadius: 25,
+    backgroundColor: '#FFC107',
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginRight: 16,
+  },
+  iconText: {
+    color: '#000',
+    fontWeight: 'bold',
+    fontSize: 18,
+  },
+  cardContent: {
+    flex: 1,
+  },
+  walletName: {
+    color: '#FFC107',
+    fontSize: 18,
+    fontWeight: 'bold',
+  },
+  walletBalance: {
+    color: '#FFF',
+    fontSize: 16,
+    marginVertical: 8,
+  },
+  walletAddress: {
+    color: '#9e9e9e',
+    fontSize: 14,
+  },
+  progressBarBackground: {
+    height: 6,
+    backgroundColor: '#333',
+    borderRadius: 3,
+    marginTop: 8,
+  },
+  progressBar: {
+    height: 6,
+    backgroundColor: '#FFC107',
+    borderRadius: 3,
+  },
+  addButton: {
+    position: 'absolute',
+    bottom: 16,
+    right: 16,
+    backgroundColor: '#FFC107',
+    width: 60,
+    height: 60,
+    borderRadius: 30,
+    alignItems: 'center',
+    justifyContent: 'center',
+    shadowColor: '#000',
+    shadowOpacity: 0.4,
+    shadowOffset: { width: 0, height: 4 },
+    shadowRadius: 4,
+  },
+  addButtonText: {
+    color: '#000',
+    fontSize: 28,
+    fontWeight: 'bold',
+  },
+});

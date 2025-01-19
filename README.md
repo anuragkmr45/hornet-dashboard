@@ -1,79 +1,192 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# Hornet User Dashboard
 
-# Getting Started
+**Version:** 0.0.1  
+A React Native app designed to showcase branding with a splash screen and a functional dashboard. The app includes drawer navigation, user profile features, and displays mock wallet data.
 
->**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
+---
 
-## Step 1: Start the Metro Server
+## Table of Contents
 
-First, you will need to start **Metro**, the JavaScript _bundler_ that ships _with_ React Native.
+- [Features](#features)
+- [Prerequisites](#prerequisites)
+- [Setup and Installation](#setup-and-installation)
+- [Project Structure](#project-structure)
+- [Usage](#usage)
+- [Testing](#testing)
+- [Dependencies](#dependencies)
+- [Screenshots](#screenshots)
 
-To start Metro, run the following command from the _root_ of your React Native project:
+---
 
+## Features
+
+### 1. Splash Screen
+- Displays branding elements (logo and app name) with animations (e.g., fade-in/out).
+- Visible for 3 seconds before navigating to the dashboard.
+
+### 2. Dashboard
+- Sections:
+  - **My Wallets**: Displays user wallets with mock data.
+  - **Monitored Wallets**: Displays monitored wallets with mock data.
+- Card/tile layout for easy readability.
+
+### 3. Drawer Navigation
+- **User Profile Section**: Placeholder image and user name.
+- **Menu Options**:
+  - Dashboard: Displays wallet data.
+
+---
+
+## Prerequisites
+
+Ensure you have the following installed:
+
+- **Node.js**: v23.x.x or later  
+- **JDK**: v17  
+- **Gradle**: v10.8.2  
+- **React Native CLI**: Follow [React Native CLI Setup Guide](https://reactnative.dev/docs/environment-setup).
+
+---
+
+## Setup and Installation
+
+Follow these steps to run the project locally:
+
+### 1. Clone the Repository
 ```bash
-# using npm
-npm start
-
-# OR using Yarn
-yarn start
+git clone https://github.com/anuragkmr45/hornet-dashboard
+cd hornet
 ```
 
-## Step 2: Start your Application
-
-Let Metro Bundler run in its _own_ terminal. Open a _new_ terminal from the _root_ of your React Native project. Run the following command to start your _Android_ or _iOS_ app:
-
-### For Android
-
+### 2. Install Dependencies
+Run the following command to install project dependencies:
 ```bash
-# using npm
+npm install
+```
+
+### 3. Configure Environment
+- Make sure you have an Android or iOS emulator ready.
+- For Android:
+  - Ensure the Android SDK is installed.
+  - Set up your `ANDROID_HOME` environment variable.
+
+### 4. Run the App
+#### Android
+```bash
 npm run android
-
-# OR using Yarn
-yarn android
 ```
-
-### For iOS
-
+#### iOS
 ```bash
-# using npm
 npm run ios
-
-# OR using Yarn
-yarn ios
+```
+#### Start the Metro Bundler
+If not started automatically:
+```bash
+npm start
 ```
 
-If everything is set up _correctly_, you should see your new app running in your _Android Emulator_ or _iOS Simulator_ shortly provided you have set up your emulator/simulator correctly.
+---
 
-This is one way to run your app — you can also run it directly from within Android Studio and Xcode respectively.
+## Project Structure
 
-## Step 3: Modifying your App
+```
+hornet
+├── src
+│   ├── .data
+│   │   └── mockWallets.ts
+│   ├── assets
+│   │   ├── hornet_logo_name.webp
+│   │   └── hornet_logo.webp
+│   ├── components
+│   │   ├── ExpandedContent.tsx
+│   │   ├── ManagedWalletCard.tsx
+│   │   └── MyWalletCard.tsx
+│   ├── navigations
+│   │   └── AppNavigation.tsx
+│   ├── screens
+│   │   ├── AppSplashScreen.tsx
+│   │   ├── ManagedWallet.tsx
+│   │   └── MyWallet.tsx
+│   ├── styles
+│       ├── AppSplashStyles.tsx
+│       ├── DrawerStyle.tsx
+│       ├── ManagedWalletStyles.tsx
+│       └── MyWalletStyles.tsx
+├── .eslintrc.js
+├── .gitignore
+├── .prettierrc.js
+├── .watchmanconfig
+├── app.json
+├── App.tsx
+├── babel.config.js
+├── Gemfile
+├── index.js
+├── jest.config.js
+├── metro.config.js
+├── package-lock.json
+├── package.json
+└── tsconfig.json
+```
 
-Now that you have successfully run the app, let's modify it.
+---
 
-1. Open `App.tsx` in your text editor of choice and edit some lines.
-2. For **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Developer Menu** (<kbd>Ctrl</kbd> + <kbd>M</kbd> (on Window and Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (on macOS)) to see your changes!
+## Usage
 
-   For **iOS**: Hit <kbd>Cmd ⌘</kbd> + <kbd>R</kbd> in your iOS Simulator to reload the app and see your changes!
+1. Launch the app using the commands mentioned above.
+2. The app will display the splash screen for 3 seconds, followed by the dashboard.
+3. Navigate between sections using the drawer menu.
 
-## Congratulations! :tada:
+---
 
-You've successfully run and modified your React Native App. :partying_face:
+## Testing
 
-### Now what?
+Run unit tests using Jest:
+```bash
+npm test
+```
 
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [Introduction to React Native](https://reactnative.dev/docs/getting-started).
+---
 
-# Troubleshooting
+## Dependencies
 
-If you can't get this to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
+### Core Dependencies:
+- **React**: 18.3.1
+- **React Native**: 0.76.6
+- **React Navigation**:
+  - `@react-navigation/native`
+  - `@react-navigation/drawer`
+  - `@react-navigation/native-stack`
 
-# Learn More
+### UI Enhancements:
+- `react-native-linear-gradient`
+- `react-native-reanimated`
 
-To learn more about React Native, take a look at the following resources:
+### Utilities:
+- `@react-native-clipboard/clipboard`
+- `react-native-safe-area-context`
+- `react-native-screens`
 
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+### Dev Dependencies:
+- `eslint`
+- `jest`
+- `typescript`
+
+---
+
+## Screenshots
+
+### Splash Screen
+(*screenshot of the splash screen.*)
+
+### Dashboard
+(*screenshot of the dashboard.*)
+
+---
+
+## Notes
+
+- Ensure you are running Node.js version **18.x** or later.
+- Adjust any Gradle settings if your Android build fails.
+
+For any issues or questions, please contact anurag45kmr@gmail.com.
+
